@@ -227,7 +227,7 @@ void GameDeath::showScores()
 	readFilee.close();
 
 	fontt.loadFromFile("fonts/Tropics.ttf");
-	hsScoree << "Highest\nScore: " << highestScoree;
+	hsScoree << "Highest Score: " << highestScoree;
 	highScoree.setCharacterSize(50);
 	highScoree.setPosition(sf::Vector2f(width * 0.4, height / (MAX_NUMBER_OF_ITEMS_GAME_DEATH + 2) * 2.8));
 	highScoree.setFont(fontt);
@@ -244,7 +244,7 @@ void GameDeath::showScores()
 	readFilee.close();
 
 	
-	sScoree << "Highest\nScore: " << scoreInt;
+	sScoree << "Your Score: " << scoreInt;
 	scoree.setCharacterSize(50);
 	scoree.setPosition(sf::Vector2f(width * 0.4, height / (MAX_NUMBER_OF_ITEMS_GAME_DEATH + 2) * 2.1));
 	scoree.setFont(fontt);
