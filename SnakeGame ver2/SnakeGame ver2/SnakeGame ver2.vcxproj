@@ -87,8 +87,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\Users\mmitr\OneDrive\Dokumenty\GitHub\SnakeGame-SFML\SFML-2.5.1\include;C:\Users\Marcin\Documents\GitHub\SnakeGame-SFML\SFML-2.5.1\include;D:\SFML-2.5.1\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\mmitr\OneDrive\Dokumenty\GitHub\SnakeGame-SFML\SFML-2.5.1\lib;C:\Users\Marcin\Documents\GitHub\SnakeGame-SFML\SFML-2.5.1\lib;D:\SFML-2.5.1\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <IncludePath>C:\GitHub\SnakeGame_SFML\SFML-2.5.1\include;C:\Users\mmitr\OneDrive\Dokumenty\GitHub\SnakeGame-SFML\SFML-2.5.1\include;C:\Users\Marcin\Documents\GitHub\SnakeGame-SFML\SFML-2.5.1\include;D:\SFML-2.5.1\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>C:\GitHub\SnakeGame_SFML\SFML-2.5.1\lib;C:\Users\mmitr\OneDrive\Dokumenty\GitHub\SnakeGame-SFML\SFML-2.5.1\lib;C:\Users\Marcin\Documents\GitHub\SnakeGame-SFML\SFML-2.5.1\lib;D:\SFML-2.5.1\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
