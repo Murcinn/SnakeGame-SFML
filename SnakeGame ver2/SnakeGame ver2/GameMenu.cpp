@@ -34,23 +34,17 @@ GameMenu::GameMenu():window(sf::VideoMode(width * 4 / 3, height), "Snake Game !!
 	menu[2].setPosition(sf::Vector2f(width / 2, height / (MAX_NUMBER_OF_ITEMS + 2) * 2.7));
 
 	selectedItemIndex = 0;
-	this->showHS();
-	
-	//this->gameStateButton = new Button(100,100,150,50,&this->font,"XDDDDD",sf::Color::White,sf::Color::Red,sf::Color::Cyan);
+	this->showHS();	
 
 }
 
 GameMenu::~GameMenu()
 {
-	//delete this->gameStateButton;
+
 }
 
 void GameMenu::runMenu()
 {
-	//this->firstGameProcess->RunGame();
-	//GameMenu();
-	
-
 	this->loadMenuBG();
 
 	while (this->window.isOpen()) {
@@ -80,106 +74,32 @@ void GameMenu::runMenu()
 
 				}
 				if (mainEvent.key.code == sf::Keyboard::Return) {
-					//sf::RenderWindow Play;//(sf::VideoMode(960, 720), "SNAKE")
-					//sf::RenderWindow ResetHs;//(sf::VideoMode(960, 720), "OPTIONS");
-					//sf::RenderWindow Exit;// (sf::VideoMode(960, 720), "ABOUT");
-					
+
 
 					int x = this->selectedItemIndex;
 					if (x == 0) {
-						//while (Play.isOpen()) {
-						//	sf::Event ev;
-						//	while (Play.pollEvent(ev)) {
-						//		if (ev.type == sf::Event::Closed) {
-						//			Play.close();
-						//		}
-						//		if (ev.type == sf::Event::KeyPressed) {
-						//			if (ev.key.code == sf::Keyboard::Escape) {
-						//				Play.close();
-						//			}
 
-						//		}
-						//	}
-						//	
-						//	ResetHs.clear();
-						//	Exit.clear();
-						//	Play.clear();
-		
-						//}
 						GameProcess firstGameProcess;
 						this->window.close();
 						firstGameProcess.RunGame();
 						
-
 					}
 					if (x == 1) {						
-						//while (ResetHs.isOpen()) {
-						//	sf::Event ev;
-						//	while (ResetHs.pollEvent(ev)) {
-						//		if (ev.type == sf::Event::Closed) {
-						//			ResetHs.close();
-						//		}
-						//		if (ev.type == sf::Event::KeyPressed) {
-						//			if (ev.key.code == sf::Keyboard::Escape) {
-						//				ResetHs.close();
-						//			}
-
-						//		}
-						//	}
-						//	this->clearHS();
-						//	//ResetHs.clear();
-						//	//Exit.clear();
-						//	//Play.clear();
-						//	//Exit.display();
-
-						//}
 						
 						this->clearHS();
 						GameMenu g1;
 						this->window.close();
 						g1.runMenu();
 					}
-					/*if (x == 2) {
-						while (Control.isOpen()) {
-							sf::Event ev;
-							while (Options.pollEvent(ev)) {
-								if (ev.type == sf::Event::Closed) {
-									Options.close();
-								}
-								if (ev.type == sf::Event::KeyPressed) {
-									if (ev.key.code == sf::Keyboard::Escape) {
-										Control.close();
-									}
 
-								}
-							}
-							Options.clear();
-							Control.clear();
-							Play.clear();
-							Control.display();
-
-						}
-
-					}*/
 					if (x == 2) 
-						std::cout << "\n\nigger";
+						
 						this->window.close();
 					return;
 
 				}			
 			}
 		}
-		
-		//this->gameStateButton->updateMousePos(&window);
-		//system("cls");
-		//std::cout << this->gameStateButton->mousePosView.x << "  " << this->gameStateButton->mousePosView.y << "\n";
-		
-		
-		
-
-
-		//this->gameStateButton->render(&window);
-		//this->gameStateButton->update(this->gameStateButton->mousePosView);
 
 		this->window.clear();
 		this->window.draw(bgShape);
@@ -271,12 +191,6 @@ void GameMenu::showHS()
 
 void GameMenu::clearHS()
 {
-	//writeFile.open("Resources/HighestScore.txt");
-	//writeFile.clear();
-	//writeFile.close();
 	std::filesystem::remove_all(hcCur);
-
-
-
 }
 

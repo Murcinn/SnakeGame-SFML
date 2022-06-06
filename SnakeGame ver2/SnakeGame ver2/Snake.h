@@ -11,8 +11,6 @@ class Snake : public Unit {
 	double snakeCounter;
 	DIRECTION dir;
 	double growCounter;
-
-	//tail
 	
 	sf::Texture tailTexture;
 

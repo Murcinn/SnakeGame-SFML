@@ -17,5 +17,4 @@ void DeltaTime::updateDT()
 {
 	this->DT = this->clock.restart().asSeconds();
 
-	//std::cout << this->DT << " \n";
 }

@@ -42,7 +42,6 @@ class GameProcess{
 	Snake* mySnake;
 	Border* myBorder;
 	Fruit* myFruit;
-	//GameMenu* myMenu;
 	Fruit* myFruit1;
 
 	double tailCounter;
@@ -73,13 +72,6 @@ public:
 	void loadBorder();
 	void loadFruit();
 	void loadWindow();
-
-	//filesystem
-	std::filesystem::path pSnake="";
-	std::filesystem::path bSnake="images/background.png";
-	std::filesystem::path fSnake;
-	std::filesystem::path f1Snake;
-	std::filesystem::path wSnake;
 
 	//collisions
 	void boardCollide();
@@ -115,25 +107,21 @@ private:
 		sf::Texture fruitTexture1;
 		std::vector<Fruit* > fruitVec;
 		std::vector<Fruit* > fruit1Vec;
+
 	//other functions
-		
 		void setTimers();
 		void loadMenu();
 		void initMenu();
-		
-	
 
 	//score
-
 		int gameScore;
 		sf::Font font;
 		std::ostringstream ssScore;
 		sf::Text lblScore;
-		
-
-
+	
 		void setScore();
 		void saveScore();
+
 	//highest score
 		std::ifstream readFile;
 		std::ofstream writeFile;
@@ -146,9 +134,4 @@ private:
 
 		void readHighestScore();
 
-
-
-	//FILESYSTEM
-
-		//std::filesystem::path 
 };

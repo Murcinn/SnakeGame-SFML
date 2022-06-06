@@ -16,7 +16,6 @@ class GameDeath {
 	int height = y * pixels;
 
 	sf::RenderWindow window;
-	//sf::Vector2f mousePos = sf::Mouse::getPosition();
 
 	//BG
 	sf::RectangleShape bgShape;
@@ -45,24 +44,10 @@ public:
 	void draw(sf::RenderWindow& window);
 	void moveUp();
 	void moveDown();
-
 	void loadDeathBG();
-
-	//int mainMenuPressed() { return selectedItemIndex; }
-
-
-	//-----
-	//Button* gameStateButton;
-
-
-
 	void showScores();
 
-
-
-
 	//run
-
 	void runGameDeath();
 
 private:
@@ -70,19 +55,5 @@ private:
 	int selectedItemIndex;//mainmenuselected
 	sf::Font font;
 	sf::Text menu[MAX_NUMBER_OF_ITEMS_GAME_DEATH];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 };

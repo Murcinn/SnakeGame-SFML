@@ -5,16 +5,13 @@
 Snake::Snake(sf::Vector2f position, sf::Texture* texture): Unit(position,texture)
 {
 	this->dir = LEFT;
+
 	this->snakeCounter = 0;
 
 	this->growCounter = 0;
 
-
-
 	this->tailTexture.loadFromFile("images/body.png");
-
-	
-	
+		
 	this->tailVec.push_back(new Tail(Unit::getPos(), texture));
 
 }
@@ -68,14 +65,13 @@ void Snake::update(double deltaTime)
 		{
 			Unit::setPos(Unit::getPos() + sf::Vector2f(-Unit::getSiz().x, 0));
 		}
-		//this->updateTails(); //Updates the Tails Position
+		
 		snakeCounter = 0;
 		this->followingTail();
 	}
 	
 	snakeCounter += deltaTime;
 
-	//Snake::followingTail();
 	
 
 }
@@ -102,9 +98,7 @@ void Snake::keyboardInput()
 }
 
 void Snake::followingTail()
-{
-	
-
+{	
 
 	for (int i = tailVec.size() - 1; i > 0; i--)
 	{
@@ -123,24 +117,14 @@ void Snake::followingTail()
 void Snake::growTail( )
 {
 
-	
-	
 		if (this->tailVec.size() == 1)
 		{
-
 			this->tailVec.push_back(new Tail(Unit::getPos(), &this->tailTexture));
-
-
 		}
 		else
 		{
-
 			this->tailVec.push_back(new Tail(this->tailVec[this->tailVec.size() - 1]->getPos(), &this->tailTexture));
 		}
-		
-
-	
-
 }
 
 bool Snake::checkSnakeCollision() {

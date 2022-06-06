@@ -15,9 +15,8 @@ class GameMenu {
 	int height = y * pixels;
 
 	sf::RenderWindow window;
-	//sf::Vector2f mousePos = sf::Mouse::getPosition();
 	
-	//BG
+	//background
 	sf::RectangleShape bgShape;
 	sf::Texture bgTexture;
 
@@ -27,7 +26,6 @@ class GameMenu {
 	std::ostringstream hsScoree;
 	int highestScoree;
 	sf::Font fontt;
-
 	std::ofstream writeFile;
 
 public:
@@ -41,12 +39,6 @@ public:
 
 	void loadMenuBG();
 
-	//int mainMenuPressed() { return selectedItemIndex; }
-
-
-	//-----
-	//Button* gameStateButton;
-
 	void showHS();
 
 	std::filesystem::path hcCur = std::filesystem::current_path().append("Resources/HighestScore.txt");
@@ -55,7 +47,6 @@ public:
 
 
 	//run
-	
 	void runMenu();
 	
 private:

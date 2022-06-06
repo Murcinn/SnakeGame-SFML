@@ -28,13 +28,10 @@ void Fruit::update(double deltaTime)
 				int ranX = ((rand() % 28 + 1) * 32) + 16;
 				int ranY = ((rand() % 28 + 1) * 32) + 16;
 
-				std::cout << ranX << " " << ranY << "\n";
+				//std::cout << ranX << " " << ranY << "\n";
 
 				Unit::setPos(sf::Vector2f(ranX, ranY));
 				this->ifCollide = false;
-
-			
-
 
 			
 		}

@@ -37,8 +37,6 @@ GameDeath::~GameDeath()
 
 void GameDeath::runGameDeath()
 {
-	//this->firstGameProcess->RunGame();
-	//GameMenu();
 
 	this->loadDeathBG();
 	
@@ -70,59 +68,25 @@ void GameDeath::runGameDeath()
 
 				}
 				if (mainEvent.key.code == sf::Keyboard::Return) {
-					//sf::RenderWindow Play_again;//(sf::VideoMode(960, 720), "SNAKE")
-					//sf::RenderWindow Back_to_menu;//(sf::VideoMode(960, 720), "OPTIONS");
+					
 					GameProcess gameProcess1;
 				
 					
 
 					int x = this->selectedItemIndex;
 					if (x == 0) {
-						//while (Play_again.isOpen()) {
-						//	sf::Event ev;
-						//	while (Play_again.pollEvent(ev)) {
-						//		if (ev.type == sf::Event::Closed) {
-						//			Play_again.close();
-						//		}
-						//		if (ev.type == sf::Event::KeyPressed) {
-						//			if (ev.key.code == sf::Keyboard::Escape) {
-						//				Play_again.close();
-						//			}
 
-						//		}
-						//	}
-
-							//Play_again.clear();
-							//Back_to_menu.clear();	
 							this->window.clear();
 							
 
-					//	}
+					
 						this->window.close();
 						gameProcess1.RunGame();
 
 
 					}
 					if (x == 1) {
-						/*while (Back_to_menu.isOpen()) {
-							sf::Event ev;
-							while (Back_to_menu.pollEvent(ev)) {
-								if (ev.type == sf::Event::Closed) {
-									Back_to_menu.close();
-								}
-								if (ev.type == sf::Event::KeyPressed) {
-									if (ev.key.code == sf::Keyboard::Escape) {
-										Back_to_menu.close();
-									}
-
-								}
-							}*/
-							//Play_again.clear();
-							//Back_to_menu.clear();
-							
 						
-
-						//}
 						gameProcess1.window.close();
 						GameMenu gameMenu1;
 						this->window.close();
@@ -135,27 +99,12 @@ void GameDeath::runGameDeath()
 			}
 		}
 
-		//this->gameStateButton->updateMousePos(&window);
-		//system("cls");
-		//std::cout << this->gameStateButton->mousePosView.x << "  " << this->gameStateButton->mousePosView.y << "\n";
 
-
-
-
-
-		//this->gameStateButton->render(&window);
-		//this->gameStateButton->update(this->gameStateButton->mousePosView);
-
-		this->window.clear();
-		
+		this->window.clear();	
 		this->window.draw(bgShape);
 		this->draw(window);
 		this->window.draw(this->highScoree);
 		this->window.draw(this->scoree);
-		
-		
-		
-
 
 		this->window.display();
 	}

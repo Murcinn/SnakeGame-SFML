@@ -35,7 +35,7 @@ void GameProcess::RunGame() {
 	sf::Clock clock = sf::Clock::Clock();
 	sf::Time previousTime = clock.getElapsedTime();
 	sf::Time currentTime;
-	std::cout << "xd";
+
 	//window.setFramerateLimit(120);
 
 	GameProcess::allLoaders();
@@ -204,7 +204,7 @@ void GameProcess::boardCollide()
 		
 		if (this->mySnake->getCollider().checkCollision(this->vecBorder[i]->getCollider()) == true) {
 
-			std::cout << "kolizja" << i << std::endl;
+			
 			this->saveScore();
 			this->window.close();
 			GameDeath firstDeath;
@@ -270,11 +270,7 @@ void GameProcess::initFruit()
 
 		}
 
-	
 
-
-		//std::cout << myFruit->getPos().x << " " << myFruit->getPos().y << " \n";
-	
 }
 
 void GameProcess::fruitCollide()
@@ -318,7 +314,7 @@ void GameProcess::bodyCollide(double deltaTime)
 	
 		if (this->mySnake->checkSnakeCollision() == true) {
 
-			std::cout << "Body collide\n";
+			
 			this->saveScore();
 			this->window.close();
 			GameDeath firstDeath;
@@ -334,7 +330,7 @@ void GameProcess::setTimers()
 	snakeDT = DeltaTime::getInstance().getDT();
 	fruitDT = DeltaTime::getInstance().getDT();
 	DeltaTime::getInstance().updateDT();
-	//std::cout << yikesDT << " \n";
+
 }
 
 void GameProcess::loadMenu()

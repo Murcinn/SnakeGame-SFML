@@ -32,9 +32,6 @@ public:
 
 	void update(const sf::Vector2f mouseVec);
 
-
-
-
 	const bool isKeyPressed()const;
 
 	//mouse pos

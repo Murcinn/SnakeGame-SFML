@@ -17,6 +17,4 @@ public:
 
 	void setCollide(bool newCol);
 
-	//virtual void draw(sf::RenderWindow* window);
-
 };
